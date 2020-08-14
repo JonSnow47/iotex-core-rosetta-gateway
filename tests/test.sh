@@ -13,6 +13,8 @@ trap "cleanup" EXIT
 GRN=$'\e[32;1m'
 OFF=$'\e[0m'
 
+ROSETTA_PATH=$(pwd)
+
 cd tests
 printf "${GRN}### Starting the iotex server...${OFF}\n"
 GW="iotex-server -config-path=config_testnet.yaml -genesis-path=genesis_testnet.yaml -plugin=gateway"
