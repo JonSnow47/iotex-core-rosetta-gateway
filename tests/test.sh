@@ -38,6 +38,7 @@ ROSETTA_SEND_TO=$SEND_TO go test -test.run TestInjectTransfer10IOTX
 printf "${GRN}### Finished transfer${OFF}\n"
 sleep 30
 
+cd $ROSETTA_PATH/rosetta-cli-config
 COUNT=$(grep -c "Transactions Confirmed: 1" rosetta-cli.log)
 printf "${GRN}### Finished check transfer, count:${COUNT}${OFF}\n"
 if [ $COUNT -lt 1 ]; then
